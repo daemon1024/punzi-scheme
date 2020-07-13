@@ -1,6 +1,10 @@
 
 (define all-tests '())
 
+;To fix `Exception in compile-program: compile package is not loaded`
+(define (compile-program x)
+    (error 'compile-program "implement me!"))
+
 (define-syntax add-tests-with-string-output
   (syntax-rules (=>)
     [(_ test-name [expr => output-string] ...)
